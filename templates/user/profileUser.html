@@ -1,0 +1,78 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/09e314988c.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static '/css/profileAdm.css'%}">
+    <link rel="stylesheet" href="{% static '/css/profUser.css'%}">
+    <title>Avenue | ProfileCustomer:..</title>
+</head>
+<body>
+    {% include 'user/adminuser.html' %}
+
+    {% block content %}
+
+    <div class="prof">
+        <div class="profIn">
+            <div class="seeProf">
+                <div id="changeP">
+                    <a href="{% url 'profAccount' %}"><i class="fas fa-tools" id="tool" ></i></a>
+                </div>
+                <div id="me">
+                    <div class="myIm">
+                        <img src="{{request.user.customer.photo_url}}" alt="">
+                    </div>
+                    <div class="names">
+                        <span>{{request.user}}</span>
+                        <p>{{request.user.groups.name}}</p>
+                    </div>
+                </div>
+                <div class="spit">
+                    <span>Personal Infomation</span>
+                    <div class="line"></div>
+                </div>
+                <div class="details">
+                    <span>{{request.user.customer.name}}</span>
+                    <span>{{request.user.customer.phone}}</span>
+                    <span>{{request.user.customer.email}}</span>
+                    <span>{{request.user.customer.recidence}}</span>
+                </div>
+            </div>
+            <div class="seeMoney">
+                <span id="sales"  style="width:100%; display: flex;justify-content:space-between;" >Favorites
+                    <a href="">add</a>
+                </span>
+                <div class="secCash" class="meFav">
+                    <div class="favMov">
+                        <div class="ban">
+                            <img src="" alt="">
+                        </div>
+                        <div class="see">
+                            <a href="">Description</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="empReq">
+                <span id="empty" >Latest Requests</span>
+                <div class="reqemp">
+                    <div class="req1">
+                        <div class="person" style="border-radius: 0;height: 100%;">
+                            <img src="" alt="">
+                        </div>
+                        <span id="mespan" >House Of Cards</span>
+                        <span id="mespan" >11/03/2021</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% endblock %}
+</body>
+</html>

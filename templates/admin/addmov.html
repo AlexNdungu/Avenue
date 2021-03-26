@@ -1,0 +1,30 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;1,700&family=Roboto:ital,wght@0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static '/css/movie.css'%}"> 
+    <link rel="stylesheet" href="{% static '/css/addm.css'%}">
+    <title>Avenue | AddMovies:..</title>
+</head>
+<body>
+    
+    {% include 'admin/admin.html' %}
+
+    {% block content %}
+
+    <div class="send">
+        <form action="" method="POST" >
+            {% csrf_token %}
+            {{form}}
+            <button type="submit" name="Submit">Submit</button>
+        </form>
+    </div>
+
+    {% endblock %}
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/09e314988c.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static '/css/profileAdm.css'%}">
+    <title>Avenue | AdminProfile:..</title>
+</head>
+<body>
+    {% include 'admin/admin.html' %}
+
+    {% block content %}
+
+    <div class="prof">
+        <div class="profIn">
+            <div class="seeProf">
+                <div id="changeP">
+                    <a href=""><i class="fas fa-tools" id="tool" ></i></a>
+                </div>
+                <div id="me">
+                    <div class="myIm">
+                        <img src="" alt="">
+                    </div>
+                    <div class="names">
+                        <span>Alex Meta Ndung’u</span>
+                        <p>Admin</p>
+                    </div>
+                </div>
+                <div class="spit">
+                    <span>Personal Infomation</span>
+                    <div class="line"></div>
+                </div>
+                <div class="details">
+                    <span>Username</span>
+                    <span>Phone</span>
+                    <span>Email</span>
+                    <span>Recidence</span>
+                </div>
+            </div>
+            <div class="seeMoney">
+                <span id="sales" >Daily Sales</span>
+                <div class="secCash">
+                    <div class="cash">
+                        <div class="cashDate">
+                            <span>1</span>
+                            <p>Dec</p>
+                        </div>
+                        <div class="cashAmount">
+                            <span>Amount:</span>
+                            <p>$10000</p>
+                        </div>
+                        <a href=""><span>View</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="empReq">
+                <span id="empty" >Empty Requests</span>
+                <div class="reqemp">
+                    <div class="req1">
+                        <div class="person">
+                            <img src="" alt="">
+                        </div>
+                        <span id="mespan" >The Mehta</span>
+                        <span id="mespan" >House Of Cards</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% endblock %}
+</body>
+</html>

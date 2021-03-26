@@ -1,0 +1,65 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/09e314988c.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;1,700&family=Roboto:ital,wght@0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">   
+    <link rel="stylesheet" href="{% static '/css/movieview.css'%}">
+    <title>Avenue | Movie:..</title>
+</head>
+<body>
+    <div class="bigdiv">
+        <div class="headdiv">
+            <div class="back">
+                <a href="{% url 'movieview' %}"><i class="fas fa-backward" id="backup"></i></a>
+            </div>
+            <div class="headview">
+                <span>SEARCHED MOVIE RESULT...</span>
+            </div>
+        </div>
+        <div class="searchsec">
+
+            {% if series %}
+            {% for i in series %}
+            <div class="category">
+                <div class="ban">
+                    <img src="{{i.banner.url}}" alt="">
+                </div>
+                <div class="movname">
+                    <p>{{i.movie}}</p>
+                </div>
+                <div class="movgen">
+                    <p>{{i.genres}}</p>
+                </div>
+                <div class="type">
+                    <p>{{i.my_type}}</p>
+                </div>
+                <div class="visit">
+                    <a href=""><i class="fas fa-eye" id="eye" ></i></a>
+                </div>
+                {% if request.user.is_staff %}
+                <div class="cancel">
+                    <i class="fas fa-times-circle" id="remove" ></i>
+                </div>
+                {% endif %}
+            </div>
+            {% endfor %}
+
+                {% else %}
+
+                <div class="alert">
+                    <h1>NOT FOUND!!</h1>
+                    <div class="sad">
+                        <i class="fas fa-frown" id="sad" ></i>
+                    </div>
+                </div>
+       
+            {% endif %}    
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,194 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+  }
+
+.mainReq {
+    width: 73%;
+    height: 100%;
+    position: absolute;
+    left: 320px;
+    top: 100px;
+    font-family: 'Lato', sans-serif;
+}
+
+#head {
+    font-weight: 900;
+    color: #BA2323;
+}
+
+
+.firstReq {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.reStart {
+    height: 160px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#sampleReq {
+    position: relative;
+    height: 120px;
+    width: 220px;
+    background-color: #EBEBEB;
+    border: 1px solid #D6D3D3;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+}
+
+#samHead {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    padding-left: 20px;
+    height: 90px;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+#samHead h3 {
+    color: #5C5656;
+}
+
+#samHead span {
+    font-weight: bold;
+}
+
+#re1 {
+    color: #3300FF;
+}
+
+#re2 {
+    color: #A82929;
+}
+
+#re3 {
+    color: #41C014;
+}
+
+.view {
+    position: absolute;
+    height: 30px;
+    width: 100%;
+    padding-top: 5px;
+    padding-left: 5px;
+    bottom: 0;
+    left: 0;
+    background-color: #E0DDDD;
+}
+
+.view:hover {
+    background-color: #f3f3f3;
+}
+
+/* Scroll Place */
+
+
+.allReq {
+    width: 100%;
+    height: 400px;
+    margin-top: 20px;
+    position: relative;
+    border: 2px solid #e9e9e9 ;
+}
+
+.allReqHead {
+    height: 30px;
+    width: 100%;
+    color: #149D11;
+}
+
+.scReqMany {
+    position: absolute;
+    height: 360px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    overflow-x: hidden;
+}
+
+.scReqMany::-webkit-scrollbar {
+    width: 10px;
+}
+
+.scReqMany::-webkit-scrollbar-track {
+   border: 2px solid #e9e9e9;
+}
+
+.scReqMany::-webkit-scrollbar-thumb {
+    background-color: rgb(190, 190, 190);
+    border-radius: 5px;
+}
+
+.loweReq {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content:space-around;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 5px;
+    
+}
+
+.loweReq:hover {
+    border: 1px solid #cecdcd;
+
+}
+
+.user {
+    height: 50px;
+    width: 50px;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.myPic {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.myPic img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+   /* Written */
+
+#f1 {
+    color: #B11C1C;
+}   
+#f2 {
+    color: #6C64CB;
+} 
+ #f3 {
+    color: #14A49B;
+} 
+ #f4 {
+    color: #BBBD3A;
+}
+#f5 {
+    color: #D21C1C;
+}  

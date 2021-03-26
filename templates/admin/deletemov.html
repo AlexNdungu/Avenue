@@ -1,0 +1,34 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/09e314988c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static '/css/movieview.css'%}">
+    <title>Avenue | DeleteMovies:..</title>
+</head>
+<body>
+
+    <div class="big">
+        <div class="headdiv">
+            <div class="back">
+                <a href="{% url 'movieview' %}"><i class="fas fa-backward" id="backup"></i></a>
+            </div>
+            <div class="headview">
+                <span id="dele" >DELETE PANEL!!</span>
+            </div>
+        </div>
+        <div class="delsec">
+            <h1>ARE YOU SURE YOU WANNA DELETE "{{item}}"</h1>
+            <form action="{% url 'deletemov' item.movie %}" method="POST" >
+                {% csrf_token %}
+                <a href="{% url 'movieview' %}">Cancel Delete</a>
+                <button type="submit" name="conf" ><i class="fas fa-trash-alt" id="trash" ></i></button>
+            </form>
+        </div>
+    
+    </div>
+</body>
+</html>

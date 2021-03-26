@@ -1,0 +1,90 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static '/css/req.css'%}">
+    <title>Avenue | Requests:..</title>
+</head>
+<body>
+
+    {% include 'admin/admin.html' %}
+
+    {% block content %}
+
+    <div class="mainReq">
+        <div class="firstReq">
+            <div id="head">
+                <span>REQUESTS</span>
+            </div>
+            <div class="reStart">
+                <div id="sampleReq">
+                    <div id="samHead">
+                        <h3>Daily Request:</h3>
+                        <span id="re1" >{{total_orders}}</span>
+                    </div>
+                    <div class="view">
+                        <span><a href="">View All</a></span>
+                    </div>
+                </div>
+                <div id="sampleReq">
+                    <div id="samHead">
+                        <h3>Pending Request:</h3>
+                        <span id="re2">{{pending}}</span>
+                    </div>
+                    <div class="view">
+                        <span><a href="">View All</a></span>
+                    </div>
+                </div>
+                <div id="sampleReq">
+                    <div id="samHead">
+                        <h3>Accomplished Request:</h3>
+                        <span id="re3">{{accomplished}}</span>
+                    </div>
+                    <div class="view">
+                        <span><a href="">View All</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="allReq">
+            <div class="allReqHead">
+                <h3>Recent Requests</h3>
+            </div>
+            <div class="scReqMany">
+                {%for order in orders%}
+                <div class="loweReq">
+                    <div class="user">
+                        <div class="myPic">
+                            <img src="{{order.user.customer.photo_url}}" alt="">
+                        </div>
+                    </div>
+                    <div class="reqPlace">
+                        <span id="f1" >{{order.movie}}</span>
+                    </div>
+                    <div class="reqAmount">
+                        <span id="f2">{{order.buys_types.cost}}</span>
+                    </div>
+                    <div class="reqDate">
+                        <span id="f3">{{order.date_pick}}</span>
+                    </div>
+                    <div class="reqTime">
+                        <span id="f4">{{order.time_pick}}</span>
+                    </div>
+                    <div class="status">
+                        <span id="f5">{{order.status}}</span>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    
+    {% endblock %}
+
+</body>
+</html>

@@ -1,0 +1,182 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+  }
+
+.headdiv {
+    height: 100px;
+    background-color: white;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+}  
+
+.search-movie form {
+    width: 75%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.search-movie form button {
+    border: none;
+    background: none;
+    height: 30px;
+    width: 30px;
+    outline: none;
+
+}
+
+#mov-search {
+    font-size: 23px;
+}
+
+.back, .headview, .search-movie {
+    width: 33.33%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#backup {
+    font-size: 40px;
+    margin-left: 20px;
+    color: rgb(124, 185, 17);
+}
+
+#backup:hover {
+    font-size: 37px;
+    color: rgb(128, 184, 32);
+}
+
+.headview span {
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+    color: #2d09ce;
+}
+
+.searchsec {
+    width: 100%;
+    height: 100%;
+}
+
+.category {
+    height: 80px;
+    width: 90%;
+    background-color: #F2F2F2;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 70px;
+}
+
+.category:hover {
+    border: 2px solid rgb(214, 214, 214);
+    height: 82px;
+    width: 90.5%;
+}
+
+p {
+    text-transform: capitalize;
+}
+
+.ban {
+    width: 100px;
+    height: 130px;
+    margin-left: -85px;
+}
+
+.ban img {
+    width: 100%;
+    height: 100%;
+}
+
+.category span {
+    font-family: 'Roboto', sans-serif;
+    color: rgb(28, 99, 231);
+    font-size: 20px;
+}
+
+.category p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color:#700404
+}
+
+.movname {
+    margin-left: -100px;
+}
+
+.movname, .movgen, .type {
+    height: 100%;
+    width:100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+}
+
+.movname {
+    width:170px;
+}
+
+#eye {
+    font-size: 30px;
+    cursor: pointer;
+    color: #11ca23;
+}
+
+#eye:hover {
+    color: #065f0f;
+}
+
+#remove{
+    font-size: 30px;
+    cursor: pointer;
+    color: #ca1111;
+}
+
+#remove:hover{
+    color: #e03636;
+}
+
+
+
+/* Result Page */
+
+.alert {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.alert h1 {
+    color: red;
+    font-family: 'Lato', sans-serif;
+}
+
+#sad {
+    color: red;
+    font-size: 100px;
+}
+
+
+
+/*DELETE PAGE*/
+
+#dele {
+    color: red;
+}

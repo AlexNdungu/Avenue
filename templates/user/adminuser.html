@@ -1,0 +1,68 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/09e314988c.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static '/css/admin.css'%}">
+    <title>Avenue</title>
+</head>
+<body>
+    <div class="admin_nav">
+        <div class="adm_top">
+            <div class="admLogo">
+                <div class="logo">
+                    <span>A</span>
+                    <span>V</span>
+                    <span>E</span>
+                    <span>N</span>
+                    <span>U</span>
+                    <span>E</span>
+                </div>
+            </div>
+            <div class="admBager">
+                <i class="fas fa-bars" id="bars" onclick="emoji()" ></i>
+            </div>
+        </div>
+        <div class="adm_go">
+            <ul>
+                <li><a href="{% url 'movieview' %}"><i class="fas fa-video" id="reps" ></i><span id="wod" >MOVIES AND SERIES</span></a></li>
+                <li><a href="{% url 'orderCustomer' %}"><i class="fas fa-exclamation-circle" id="reps"></i><span id="wod">REQUESTS</span></a></li>
+                <li><a href=""><i class="far fa-comments" id="reps"></i><span id="wod">MESSAGES & NOTIFICATIONS</span> </a></li>
+                <li><a href=""><i class="fas fa-tags" id="reps"></i><span id="wod">PAYMENTS</span> </a></li>
+                <li><a href="{% url 'profileUser' %}"><i class="fas fa-user-circle" id="reps"></i><span id="wod">PROFILE</span> </a></li>
+                <li><a href="{% url 'logout' %}"><i class="fas fa-running" id="reps"></i><span id="wod">LOGOUT</span> </a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="pic_navigation">
+        <div id="nav_right">
+            <div class="req">
+                <a href=""><i class="fas fa-bell" id="top_icon" ></i></a>
+            </div>
+            <div class="notif">
+                <a href=""><i class="fas fa-exclamation-triangle" id="top_icon" ></i></a>
+            </div>
+            <div class="me">
+                <div class="mineName">
+                    <span>Hello</span>
+                    <span id="admin_name" >{{request.user}}</span>
+                </div>
+                <div class="minePic">
+                    <img src="{{request.user.customer.photo_url}}" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% block content %}
+
+    {% endblock %}
+
+</body>
+<script src="{% static '/js/movie.js'%}" charset="utf-8"></script>
+</html>

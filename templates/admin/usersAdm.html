@@ -1,0 +1,64 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static '/css/viewusers.css'%}">
+    <title>Avenue | MeProfile:..</title>
+</head>
+<body>
+    {% include 'admin/admin.html' %}
+
+    {% block content %}
+
+    <div id="mainUser">
+        <div class="user-head">
+            <div class="heading">
+                <span>USERS: {{customer_number}}</span>
+            </div>
+            <div class="search-user">
+                <form action="" method="GET" >
+                    <input type="text" placeholder="Search for any User" id="search-all" name="search">
+                    <button type="submit" ><i class="fas fa-search" id="user-search" ></i></button>
+                </form>
+            </div>
+        </div>
+        <div id="our-members">
+            <div id="members-head">
+                <h3>Our Members</h3>
+            </div>
+            <div id="the-users">
+                {% for customer in customers %}
+                <div class="sc-user">
+                    <div id="people-image">
+                        <img src="{{customer.photo_url}}" alt="">
+                    </div>
+                    <div class="user-name">
+                        <span id="u1" >{{customer.name}}</span>
+                    </div>
+                    <div class="user-email">
+                        <span id="u2" >{{customer.email}}</span>
+                    </div>
+                    <div class="user-fav">
+                        <span id="u3" >{{customer.genre}}</span>
+                    </div>
+                    <div class="user-resid">
+                        <span id="u4" >{{customer.recidence}}</span>
+                    </div>
+                    <div class="visit">
+                        <a href="{% url 'userDetails' customer.pk %}"><i class="fas fa-eye" id="eye" ></i></a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    
+    {% endblock %}
+
+    
+</body>
+</html>

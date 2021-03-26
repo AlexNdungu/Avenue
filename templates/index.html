@@ -1,0 +1,114 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://kit.fontawesome.com/09e314988c.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100;300;600;700;800;900&family=Dosis:wght@200;300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Roboto:ital,wght@0,100;0,300;0,400;0,900;1,300;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="{% static '/css/style.css'%}">
+  <title>Avenue | HOME:..</title>
+</head>
+
+<body>
+
+  <!--Navigation-->
+  <div class="navigation">
+    <div class="logo">
+      <span>A</span>
+      <span>V</span>
+      <span>E</span>
+      <span>N</span>
+      <span>U</span>
+      <span>E</span>
+    </div>
+    <div class="smallNav">
+      <div class="home">
+        <a href=""><i class="fas fa-home" id="home"></i></a>
+      </div>
+      <div class="login">
+        <a href="{% url 'log' %}"><i class="fas fa-users" id="users"></i></a>
+      </div>
+      <div class="about">
+        <a href=""><span>About Us</span></a>
+        <div class="aboutUnder"></div>
+      </div>
+    </div>
+  </div>
+
+  <!--Welcome-->
+
+  <div class="welcome">
+    <div class="wordSection">
+      <div class="name">
+        <h2>AVENUE MOVIE SHOP</h2>
+        <p>We pride ourserves with our upto date entertainment and services.</p>
+        <button><a href="">get started</a></button>
+      </div>
+    </div>
+    <div class="picSec">
+      <img src="{% static '/images/thebat.jpg' %}" id="thebat" alt="">
+    </div>
+  </div>
+
+   <!--Email Section-->
+
+   <form class="email">
+     <input type="text" id="emailInput" placeholder="Email">
+     <butt><i class="fas fa-arrow-right" id="emailArrow" ></i></butt>
+   </form>
+
+   <!--Movie Section-->
+
+   <div class="mainMovies">
+     <div id="headMovies">
+       <h2>Movies</h2>
+     </div>
+     <div class="movies">
+       <div class="movie">
+         <a href="#"><img src="{% static '/images/rampage1.jpg'%}" alt=""></a>
+       </div>
+       <div class="movie">
+         <a href="#"><img src="{% static '/images/avengers.jpg'%}" alt=""></a>
+       </div>
+       <div class="movie">
+         <a href="#"><img src="{% static '/images/alita1.jpg'%}" alt=""></a>
+       </div>
+     </div>
+     <div class="addMovies">
+       <a href="#"><i class="fas fa-plus" id="addMovies" ></i></a>
+     </div>
+   </div>
+
+   <!--Series Section-->
+
+   <div class="mainSeries">
+     <div id="headMovies">
+       <h3 id="ser" >Series</h3>
+     </div>
+     <div class="movies">
+       <div class="movie">
+         <a href="#"><img src="{% static '/images/hanna.jpg'%}" alt=""></a>
+       </div>
+       <div class="movie">
+         <a href="#"><img src="{% static '/images/passage.jpg'%}" alt=""></a>
+       </div>
+       <div class="movie">
+         <a href="#"><img src="{% static '/images/vd.jpg'%}" alt=""></a>
+       </div>
+     </div>
+     <div class="addMovies">
+       <a href="#"><i class="fas fa-plus" id="addMovies" ></i></a>
+     </div>
+   </div>
+
+</body>
+<script src="{% static '/js/main.js'%}" charset="utf-8"></script>
+
+</html>

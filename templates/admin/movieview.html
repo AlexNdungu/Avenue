@@ -1,0 +1,64 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://kit.fontawesome.com/09e314988c.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;1,700&family=Roboto:ital,wght@0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">        <link rel="stylesheet" href="{% static '/css/movie.css'%}">
+        <link rel="stylesheet" href="{% static '/css/movieview.css'%}">
+        <title>Avenue | AllMovies:..</title>
+    </head>
+    <body>
+      
+        <div class="bigdiv">
+            <div class="headdiv">
+                <div class="back">
+                    <a href="{% url 'createMovie' %}"><i class="fas fa-backward" id="backup"></i></a>
+                </div>
+                <div class="headview">
+                    <span>VIEWS ALL MOVIES</span>
+                </div>
+                <div class="search-movie">
+                    <form action="/movieresult/" method="GET" >
+                        <input type="text" placeholder="Search for any Movie Or Series" id="search-all" name="search">
+                        <button type="submit" ><i class="fas fa-search" id="mov-search" ></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="searchsec">
+                {% for movie in movies %}
+                <div class="category">
+                    <div class="ban">
+                        <img src="{{movie.banner.url}}" alt="">
+                    </div>
+                    <div class="movname">
+                        <p>{{movie.movie}}</p>
+                    </div>
+                    <div class="movgen">
+                        <p>{{movie.genres}}</p>
+                    </div>
+                    <div class="type">
+                        <p>{{movie.my_type}}</p>
+                    </div>
+                    <div class="visit">
+                        <a href="{% url 'moviedetail' movie.pk %}"><i class="fas fa-eye" id="eye" ></i></a>
+                    </div>
+                    {% if request.user.is_staff %}
+                    <div class="cancel">
+                        <a href="{% url 'deletemov' movie.movie %}"><i class="fas fa-times-circle" id="remove" ></i></a>
+                    </div>
+                    {% endif %}
+                </div>
+                {% endfor %}
+
+            </div>
+        </div>
+        <script src="" ></script>
+    </body>
+</html>

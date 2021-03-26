@@ -1,0 +1,82 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://kit.fontawesome.com/09e314988c.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100;300;600;700;800;900&family=Dosis:wght@200;300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Roboto:ital,wght@0,100;0,300;0,400;0,900;1,300;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="{% static '/css/style.css'%}">
+  <link rel="stylesheet" href="{% static '/css/log.css'%}">
+  <title>Avenue | SignIn:..</title>
+</head>
+
+<body>
+
+  <!--Navigation-->
+  <div class="navigation">
+    <div class="logo">
+      <span>A</span>
+      <span>V</span>
+      <span>E</span>
+      <span>N</span>
+      <span>U</span>
+      <span>E</span>
+    </div>
+  </div>
+
+    <div class="send">
+      <div class="introLog">
+        <div class="loginWel">
+          <span>Sign Up</span>
+        </div>
+      </div>
+      <div id="forms">
+        <div class="admin">
+          <form class="formAdmin" action="" method="POST">
+
+            {% csrf_token %}
+            
+            {{form.username}}
+            {{form.email}}
+            {{form.password1}}
+            {{form.password2}}
+            <div class="continue">
+                <p>By continuing with us you agree to our <a href="">Terms Of Service</a> and <a href="">Privacy Policy</a></p>
+            </div>
+            <div class="sub">
+              <button type="submit" name="loginAdmin" id="adminSub">SIGN IN</button>
+            </div>
+           </form>
+
+           {{form.errors}}
+
+           <div class="relog">
+            <p>Alredy have an account?<a href="{% url 'log' %}">LOGIN</a></p>
+        </div> 
+        </div>
+      </div>
+    </div>
+    <script>
+
+    var form_fields = document.getElementsByTagName('input')
+    form_fields[1].placeholder = 'Username...'
+    form_fields[2].placeholder = 'Email...'
+    form_fields[3].placeholder = 'Enter Password...'
+    form_fields[4].placeholder = 'Retry Password..'
+
+    for(var fields in form_fields){
+      form_fields[fields].className += 'form-control'
+    }
+
+    </script>
+</body>
+<script src="{% static '/js/main.js'%}" charset="utf-8"></script>
+
+</html>
