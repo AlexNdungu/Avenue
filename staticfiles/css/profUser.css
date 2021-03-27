@@ -1,0 +1,13 @@
+.favMov {
+    min-height: 240px;
+    min-width: 140px;
+    background-color: #F3F2F2;
+    margin-right: 15px;
+    margin-bottom: 10px;
+}
+
+.ban {
+    height: 185px;
+    width: 100%;
+    background-color: blanchedalmond;
+}

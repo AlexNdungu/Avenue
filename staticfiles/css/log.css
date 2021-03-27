@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,800;1,200;1,300;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&family=Roboto+Slab:wght@100;300;400;500;700;800&display=swap');
+
+/*LOGIN START*/
+
+.logo {
+  position: absolute;
+  left: 38.5%;
+}
+
+.logo span {
+  font-size: 70px;
+}
+
+.send {
+  background-color: black;
+  width: 100%;
+  height: 90vh;
+}
+
+.introLog {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  background-color: black;
+  color: white;
+}
+
+.loginWel span {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  font-size: 50px;
+  font-style: italic;
+}
+
+.logState p {
+  font-family: 'Karla', sans-serif;
+  font-size: 20px;
+  font-weight: lighter;
+}
+
+/*form*/
+
+#forms {
+  width: 100%;
+  height: 70%;
+}
+
+.admin {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.buttonSel {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 150px;
+  background-color: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.buttonSel #normalUser,.buttonSel #crownUser {
+  font-size: 50px;
+}
+
+/*Both Forms*/
+
+.formAdmin {
+  position: relative;
+  background-color: black;
+  height: 400px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#id_username, #id_email, #id_password1, #id_password2, #adminName, #adminPassword {
+  outline: 0;
+  width: 300px;
+  height: 30px;
+  background: none;
+  border-width: 0 0 2px;
+  border-color: white;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 20px;
+  color: white;
+}
+
+#adminEmail::placeholder, #adminPassword::placeholder, #retAdminPassword::placeholder {
+  color: white;
+}
+
+.formAdmin h4 {
+  margin-left: 300px;
+}
+
+.formAdmin h4 a {
+  color: #1E7B6B;;
+  font-family: 'Abel', sans-serif;
+  font-size: 19px;
+}
+
+#noAcc a {
+  color: #2d772d;
+}
+
+/*Button submits*/
+
+.sub {
+  position: relative;
+  width: 100%;
+}
+
+.sub button {
+  width: 200px;
+  height: 30px;
+  border: none;
+  border-radius: 30px;
+  font-family: 'Roboto Slab', serif;
+  font-size: 17px;
+  font-weight: bold;
+  position: absolute;
+  left: 42.5%;
+  top: 0;
+  outline: none;
+  transition: transform .2s;
+}
+
+.sub button:hover {
+  background-color: #aeafaf;
+  transform: scale(1.1);
+}
+
+#message {
+  color: #0082be;
+  height: 50px;
+  width: 200px;
+  font-family: 'Karla', sans-serif;
+  background-color: #aeafaf;
+}
+
+
+/*Button change*/
+
+#adminSub {
+  color: #072db9;
+}
+
+
+
+/*Sign Up Page*/
+
+.continue p {
+  color: white;
+  font-family: 'Karla', sans-serif;
+  font-size: 17px;
+  word-spacing: 3px;
+}
+
+.continue a {
+  color: #416ABA;
+}
+
+.relog {
+  padding-top: 50px;
+}
+
+.relog p {
+  color: white;
+  font-family: 'Karla', sans-serif;
+  font-size: 17px;
+  word-spacing: 3px;
+}
+
+.relog a {
+  color: #416ABA;
+}
+

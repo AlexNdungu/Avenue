@@ -1,0 +1,118 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none
+}
+
+
+.send {
+    position: absolute;
+    top: 100px;
+    left: 25%;
+    height: 120vh;
+    width: 70%;
+}
+
+label {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+}
+
+ul li {
+    font-family: 'Roboto', sans-serif;
+    color: rgb(85, 85, 214);
+}
+
+.send form {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+input {
+    width:270px;
+    height: 30px;
+    outline: none;
+    border: solid rgba(236, 34, 34, 0.3) 1px;
+    border-radius: 5px;
+}
+
+form #id_mlength, form #id_slength {
+    outline: none;
+    border: solid rgba(236, 34, 34, 0.3) 1px;
+    border-radius: 5px;
+    width: 60px;
+    height: 30px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+}
+
+textarea {
+    width: 400px;
+    height: 200px;
+    resize: none;
+    outline: none;
+    border: solid rgba(236, 34, 34, 0.3) 1px;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+}
+
+#id_banner {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    outline: none;
+    width: 200px;
+    background-color: #fff;
+    border-radius: 50px;
+}
+
+::-webkit-file-upload-button{
+    background-color: #f76d6d;
+    border: none;
+    border-radius: 50px;
+    outline: none;
+    height: 30px;
+}
+
+select {
+    background-color: #f76d6d;
+    width: 200px;
+    height: 30px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    outline: none;
+}
+
+button {
+    margin-left: 47%;
+    height: 30px;
+    width: 150px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(25, 102, 25);
+    border-radius: 25px;
+    border: 1px solid green;
+    outline: none;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+button:hover {
+    font-size: 16px;
+    background-color: rgb(226, 226, 226);
+}
+
+.datetime {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+}
