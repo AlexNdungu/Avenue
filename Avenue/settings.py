@@ -84,7 +84,8 @@ DATABASES = {
         'NAME': 'avenues',
         'USER' : 'postgres',
         'PASSWORD': 'mehta200119',
-        'HOST': 'localhost'
+        'HOST': '',
+        'POST': '5432',
     }
 }
 #Heroku Postgres Link
