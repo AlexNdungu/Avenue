@@ -1,1 +1,1 @@
-web gunicorn Avenue.wsgi --log-file -
+web: gunicorn Avenue.wsgi --log-file -
