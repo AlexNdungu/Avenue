@@ -25,11 +25,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '5ga)21&+&u^3^%t)=b2_yu%2)*h@u#%@8@l@%lvq_^8h+e_6$w'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = [
-    
-]
+ALLOWED_HOSTS = ['avenue-shop.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
