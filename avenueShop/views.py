@@ -25,7 +25,7 @@ def log(request):
 
         if user is not None:
             login(request, user)
-            return redirect('createMovie')
+            return redirect('sign')
 
         else:
             messages.info(request, 'Username Or Password is incorrect')    
