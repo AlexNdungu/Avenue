@@ -102,13 +102,13 @@ def deletemov(request, pk):
 def createMovie(request):
     form = MoviesForm()
     if request.method == 'POST':
-        form = MoviesForm(request.POST)
+        form = MoviesForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
             return redirect('movieview')
 
     context = {'form':form}
-    return render(request, 'admin/addmov.html',context)    
+    return render(request, 'addmov.html',context)    
 
 @login_required(login_url='log')
 @allowed_users(allowed_roles=['admin'])
