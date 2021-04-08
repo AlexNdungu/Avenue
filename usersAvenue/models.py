@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from avenueShop.models import Movies, Genre
+from django.urls import reverse
 # Create your models here.
 
 class Customer(models.Model):
@@ -19,7 +20,10 @@ class Customer(models.Model):
     @property
     def photo_url(self):
         if self.my_pic and hasattr(self.my_pic, 'url'):
-            return self.my_pic.url        
+            return self.my_pic.url     
+
+    def get_absolute_url(self):
+        return reverse ('userAvenue:profAccount',args=[self.id,])               
 
 class Buy(models.Model):
     buy_type = models.CharField(max_length=100,null=True)
