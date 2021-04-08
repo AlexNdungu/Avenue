@@ -8,11 +8,9 @@ class MoviesSitemap(Sitemap):
 
 class StaticSitemap(Sitemap):
     changefreq = "yearly"
-    priority = 0.8
-    protocol = 'https'
 
     def items(self):
-        return ['avenueShop:index',]
+        return ['index']
 
     def location(self, item):
             return reverse(item)        
