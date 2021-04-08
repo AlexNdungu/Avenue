@@ -28,6 +28,9 @@ class Movies(models.Model):
     def __str__(self):
         return self.movie
 
+    class Meta:
+        ordering='movie'     
+
     def get_absolute_url(self):
         return reverse ('avenueShop:createMovie',args=[self.id,])    
         
