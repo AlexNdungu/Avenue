@@ -26,10 +26,7 @@ class Movies(models.Model):
     my_type = models.CharField( max_length=50, choices=MY_TYPE)
 
     def __str__(self):
-        return self.movie
-
-    class Meta:
-        ordering= ['movie']     
+        return self.movie   
 
     def get_absolute_url(self):
         return reverse ('avenueShop:createMovie',args=[self.id,])    

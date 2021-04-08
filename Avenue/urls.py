@@ -18,11 +18,10 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib.sitemaps.views import sitemap
-from avenueShop.sitemaps import MoviesSitemap,StaticSitemap
+from avenueShop.sitemaps import MoviesSitemap
 
 sitemaps = {
     'items':MoviesSitemap,
-    'static':StaticSitemap
 }
 
 urlpatterns = [
